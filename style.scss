@@ -127,9 +127,11 @@ $overlay: #181C29CC;
 * {
     margin: 0 auto;
     padding: auto;
+    scroll-behavior: smooth;
 }
 body {
     font-family: "Montserrat", "Allura"; 
+    
 }
 
 .header {
@@ -191,8 +193,9 @@ body {
     }
     &__link_items:nth-child(1) {
         width: 78px;
-        margin-left: 6px;
+        margin-left: 6px; 
     }
+    
     &__link_items:nth-child(2) {
         width: 88px;
         margin-right: 0px;
@@ -737,5 +740,104 @@ body {
     }
      &__timer--separator:nth-child(3) {
         border-right: 1px solid $staticWhite40;  
+    }
+}
+
+.footer {
+    width: 1440px;
+    height: 496px;
+    color: $dark;
+    @include flex-center();
+    background-color: $staticWhite;
+    &__container {
+        width: 1276px;
+        height: 376px;
+    }
+    &__container_cards {
+        width: 1276px;
+        height: 204px;
+        display: flex;
+        gap: 12px;
+    }
+    &__cards_content {
+        width: 417.33px;
+        height: 204px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $contentBackground;
+        cursor: pointer;
+    }
+    &__cards_content:hover {
+        transform: scale(1.01);
+    }
+    &__cards_img {
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+    }
+    &__cards_head {
+        width: 377.33px;
+        height: 36px;
+        size: 24px;
+        line-height: 24px;
+        letter-spacing: 4px;
+        text-align: center;
+        @include actionLarge();
+        margin-left: 22px;
+        margin-top: 19px;
+        
+    }
+    &__cards_subhead {
+        width: 377.33px;
+        height: 24px;
+        size: 16px;
+        line-height: 24.32px;
+        letter-spacing: 1.3px;
+        text-align: center;
+        @include header3();
+        margin-top: 6px;
+    }
+    &__container_contacts {
+        width: 1276px;
+        height: 112px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__container_contacts_social_media {
+        width: 196px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    &__container_contacts_social_media_box {
+        width: 40px;
+        height: 40px;
+        @include flex-center();
+    }
+    &___container_contacts_social_media_box_img {
+        width: 24px;
+        height: 24px;
+    }
+    &__container_contacts_paragraph {
+        @include paragraph();
+        size: 16px;
+        line-height: 23.68px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        width: 301px;
+        height: 24px;
+    }
+    &__container_contacts_caption {
+        @include caption();
+        scroll-padding-inline-start: 24px;
+        line-height: 24px;
+        letter-spacing: 1.17px;
+        text-align: center;
+        width: 290px;
+        height: 24px;
     }
 }
