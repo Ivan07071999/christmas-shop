@@ -42,8 +42,6 @@ $tagGreen: #06A44F;
 $contentBackground: #ECF3F8;
 $overlay: #181C29CC;
 
-
-
 @mixin header1 {
     font-family: "Montserrat";
     font-size: 30px;
@@ -82,7 +80,6 @@ $overlay: #181C29CC;
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: 600;
-
     text-transform: uppercase;
 }
 
@@ -131,7 +128,6 @@ $overlay: #181C29CC;
 }
 body {
     font-family: "Montserrat", "Allura"; 
-    
 }
 
 .header {
@@ -230,9 +226,10 @@ body {
         transform: translateY(-1px);
         }
     &__snow {
-        width: 1140px;
-        height: 524px;
+        width: 100%;
+        height: 100%;
         position: absolute;
+        z-index: 0;
     }
     &__container {
         width: 426px;
@@ -247,7 +244,6 @@ body {
         letter-spacing: 1.2px;
         color: $staticWhite;
         margin-top: 57px;
-
     }
     &__header1 {
         width: 426px;
@@ -288,13 +284,11 @@ body {
         border-radius: 20px;
         @include flex-center();
         background-color: $staticWhite;
-
+        z-index: 1;
     }
     &__container {
         width: 638px;
         height: 528px;
-        
-
     }
     &__container--small-text {
         width: 426px;
@@ -767,6 +761,10 @@ body {
         border-radius: 20px;
         background-color: $contentBackground;
         cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+        color: $dark;
     }
     &__cards_content:hover {
         transform: scale(1.01);
