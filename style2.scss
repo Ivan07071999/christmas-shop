@@ -1,0 +1,485 @@
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/montserrat/Montserrat-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/montserrat/Montserrat-SemiBold.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/montserrat/Montserrat-Light.woff2) format("woff2");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Allura";
+    src: url(fonts/allura/Allura-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+$dark: #181C29;
+$primary: #FF4646;
+$primary10: #FF46461A;
+$staticWhite: #FFFFFF;
+$staticWhite40:#FFFFFF66;
+$staticWhite20: #FFFFFF33;
+$tagPurle:#4361FF;
+$tagPink: #FF43F7;
+$tagGreen: #06A44F;
+$contentBackground: #ECF3F8;
+$overlay: #181C29CC;
+
+@mixin header1 {
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin header2 {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin header3 {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin header4 {
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin paragraph {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin actionLarge {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin actionSmall {
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    text-transform: uppercase;
+}
+
+@mixin caption {
+    font-family: "Allura";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+@mixin sliderText {
+    font-family: "Montserrat";
+    font-size: 80px;
+    font-weight: 600;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin button {
+    border: none;
+    border-radius: 20px;
+    background-color: $dark;
+    width: 235px;
+    height: 56px;
+    text-align: center;
+    color: $staticWhite;
+    }
+
+* {
+    margin: 0 auto;
+    padding: auto;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", "Allura"; 
+    background-color: $staticWhite;
+    color: $staticWhite;
+}
+
+.header {
+    background-color: $staticWhite;
+    &__wrapper {
+        max-width: 1440px;
+        height: 64px;
+       @include flex-center();
+    }
+    &__content {
+        width: 1276px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        display: inline-block;
+        width: 141px;
+        height: 40px;
+        cursor: pointer;
+        @include flex-center();
+        gap: 8px;
+        margin: 1px 0px 0px 1px;  
+    }
+    &__logo_image {
+        width: 24px;
+        height: 24px;
+        margin: 0px 0px 2px 0px;
+    }
+    &__logo_text {
+        width: 69px;
+        height: 16px;
+        @include actionSmall();
+        margin: 0px 2px 2px 0px;
+        letter-spacing: 0.55px;
+    }
+    &__link {
+        width: 376px;
+        height: 40px;
+        @include actionSmall();
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+        gap: 18px;
+        margin-bottom: 2px;
+        margin: 0px 1px 0px 0px;
+       
+       
+    }
+    &__link_items {
+        height: 40px;
+        text-decoration: none;
+        display: inline-block;
+        color: $dark;
+        border-radius: 12px;
+        @include flex-center();
+        letter-spacing: 0.65px;
+        margin-bottom: 0px 0px 0px 0px;
+        
+        
+    }
+    &__link_items:nth-child(1) {
+        width: 78px;
+        margin-left: 6px; 
+        background-color: $primary10;
+        color: $primary;
+        pointer-events: none;
+        
+        
+    }
+    &__link_items:nth-child(2) {
+        width: 88px;
+        margin-right: 0px;
+      
+    }
+    &__link_items:nth-child(3) {
+        width: 74px;
+        margin-right: 1px;
+       
+    }
+    &__link_items:nth-child(4) {
+        width: 112px;
+        margin-right: 5px;
+      
+    }
+    &__link_items:hover {
+        background-color: $primary10;
+        color: $primary;
+    }  
+}
+
+.gifts {
+    width: 1440px;
+    height: 1394px;
+    background-color: $primary;
+    border-radius: 20px;
+    @include flex-center();
+    &__background {
+        width: 1440px;
+        height: 200px;
+        position: absolute;
+        z-index: 0;
+        top: 64px;
+    }
+    &__container {
+        width: 1276px;
+        height: 1274px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__container_header {
+        width: 426px;
+        height: 144px;
+        &_content {
+            @include header1();
+            text-align: center;
+            size: 32px;
+            line-height: 48px;
+            letter-spacing: 7px;
+        }
+    }
+    &__container_tabs {
+        width: 474px;
+        height: 40px;
+        display: flex;
+        gap: 8px;
+       
+        &_tab {
+            cursor: pointer;
+            height: 40px;
+            border-radius: 12px;
+            @include flex-center();
+            justify-content: space-between;
+            
+            &_childe {
+                @include actionSmall();
+                size: 12px;
+                line-height: 15.6px;
+                letter-spacing: 0.7px;
+            }
+        }
+        &_tab:hover {
+            background-color: $staticWhite20;
+        }
+        &_tab:nth-child(1) {
+            width: 65px;
+            background-color: $staticWhite20;
+
+        }
+        &_tab:nth-child(2) {
+            width: 116px;
+
+        }
+        &_tab:nth-child(3) {
+            width: 126px;
+
+        }
+        &_tab:nth-child(4) {
+            width: 143px;
+
+        }
+    }
+    &__container_cards_container {
+        width: 1276px;
+        height: 1050px;
+        display: grid;
+        grid-template-columns: repeat(4, 310px);
+        grid-template-rows: repeat(3, 342px);
+        gap: 12px;
+    
+        &_card {
+            cursor: pointer;
+            width: 310px;
+            height: 342px;
+            border-radius: 20px;
+            background-color: $contentBackground;
+            &_img_wrapper {
+                width: 310px;
+                height: 230px;
+                &_img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &_text {
+                width: 310px;
+                height: 92px;
+                border-radius: 20px;
+                background-color: $staticWhite;
+                padding-top: 20px;
+                &_header4 {
+                    @include header4();
+                    size: 12px;
+                    line-height: 15.6px;
+                    letter-spacing: 0.6px;
+                    color: #181C29;
+                    margin: 0px 0px 0px 20px;
+                }
+                &_header3 {
+                    @include header3();
+                    size: 16px;
+                    line-height: 24.32px;
+                    letter-spacing: 1.3px;
+                    color: #181C29;
+                    margin: 9px 0px 0px 20px; 
+                }
+            }
+        }
+        &_card:hover {
+            transform: scale(1.01);
+        }
+    }
+   &__card_header4--color1 {
+    color: $tagPurle;
+   }
+   &__card_header4--color2 {
+    color: $tagGreen;
+   }
+   &__card_header4--color3 {
+    color: $tagPurle;
+   }
+   &__card_header4--color4 {
+    color: $tagPurle;
+   }
+   &__card_header4--color5 {
+    color: $tagGreen;
+   }
+   &__card_header4--color6 {
+    color: $tagPink;
+   }
+   &__card_header4--color7 {
+    color: $tagGreen;
+   }
+   &__card_header4--color8 {
+    color: $tagPink;
+   }
+   &__card_header4--color9 {
+    color: $tagGreen;
+   }
+   &__card_header4--color10 {
+    color: $tagPurle;
+   }
+   &__card_header4--color11 {
+    color: $tagPink;
+   }
+   &__card_header4--color12 {
+    color: $tagPink;
+   }
+}
+
+.footer {
+    width: 1440px;
+    height: 496px;
+    color: $dark;
+    @include flex-center();
+    background-color: $staticWhite;
+    &__container {
+        width: 1276px;
+        height: 376px;
+    }
+    &__container_cards {
+        width: 1276px;
+        height: 204px;
+        display: flex;
+        gap: 12px;
+    }
+    &__cards_content {
+        width: 417.33px;
+        height: 204px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $contentBackground;
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+        color: $dark;
+    }
+    &__cards_content:hover {
+        transform: scale(1.01);
+    }
+    &__cards_img {
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+    }
+    &__cards_head {
+        width: 377.33px;
+        height: 36px;
+        size: 24px;
+        line-height: 24px;
+        letter-spacing: 4px;
+        text-align: center;
+        @include actionLarge();
+        margin-left: 22px;
+        margin-top: 19px;
+        
+    }
+    &__cards_subhead {
+        width: 377.33px;
+        height: 24px;
+        size: 16px;
+        line-height: 24.32px;
+        letter-spacing: 1.3px;
+        text-align: center;
+        @include header3();
+        margin-top: 6px;
+    }
+    &__container_contacts {
+        width: 1276px;
+        height: 112px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__container_contacts_social_media {
+        width: 196px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    &__container_contacts_social_media_box {
+        width: 40px;
+        height: 40px;
+        @include flex-center();
+    }
+    &___container_contacts_social_media_box_img {
+        width: 24px;
+        height: 24px;
+    }
+    &__container_contacts_paragraph {
+        @include paragraph();
+        size: 16px;
+        line-height: 23.68px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        width: 301px;
+        height: 24px;
+    }
+    &__container_contacts_caption {
+        @include caption();
+        scroll-padding-inline-start: 24px;
+        line-height: 24px;
+        letter-spacing: 1.17px;
+        text-align: center;
+        width: 290px;
+        height: 24px;
+    }
+}
