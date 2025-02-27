@@ -124,17 +124,67 @@ $overlay: #181C29CC;
     margin: 0 auto;
     padding: auto;
     scroll-behavior: smooth;
+
+
 }
 body {
     font-family: "Montserrat", "Allura"; 
 }
 
 .header {
+    width: 1440px;
+      &__hamburger {
+        display: flex;
+        position: absolute;
+        z-index: 50;
+        align-items: center;
+        justify-content: flex-end;
+        width: 40px;
+        height: 40px;
+        visibility: hidden;
+       
+        
+    }
+    &__burger {
+        height: 1px;
+        width: 20px;
+        transform: scale(0);
+        background-color: $dark;
+    }
+    &__hamburger::before, &__hamburger::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 20px;
+        background-color: $dark;
+        transition: all 0.3s ease 0s;
+        top: 13px;
+        left: 10px;
+    }
+
+    &__hamburger::after {
+        top: 20px;
+    }
+    &__hamburger_active::before {
+        top: 20px;
+        left: 10px;
+       transform: rotate(45deg) translate(0, 49%);
+      
+    }
+
+     &__hamburger_active::after {
+       top: 21px;
+       transform: rotate(-45deg) translate( 0,-50%);
+       
+    }
+   
+
     background-color: $staticWhite;
     &__wrapper {
         max-width: 1440px;
         height: 64px;
        @include flex-center();
+       
     }
     &__content {
         width: 1276px;
@@ -142,6 +192,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
     }
     &__logo {
         display: inline-block;
@@ -482,6 +533,9 @@ body {
         line-height: 15.6px;
         letter-spacing: 0.5px;
     }
+    &__header3:hover {
+        color: $primary;
+    }
      &__header3 {
         @include header3();
         size: 16px;
@@ -613,6 +667,7 @@ body {
     &__modal4_hidden {
         visibility: hidden;
     }
+
 }
 
 .cta {
@@ -830,4 +885,37 @@ body {
         width: 290px;
         height: 24px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__hamburger {
+            visibility: visible;
+            position: absolute;
+            left: 720px;
+        }
+        &__link {
+            width: 768px;
+            height: 960px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            top: -500px;
+            transform: translateY(564px);
+            background-color: $staticWhite;
+            transition: all 0.5s ease-out 0s;
+            &_items {
+                @include actionLarge();
+                size: 24px;
+                margin: 0;  
+            }
+        }
+        &__link_hidden {
+            visibility: hidden;
+        }
+    }
+
 }

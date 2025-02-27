@@ -38,6 +38,7 @@ body {
 }
 
 .header {
+  width: 1440px;
   background-color: #FFFFFF;
 }
 .header__wrapper {

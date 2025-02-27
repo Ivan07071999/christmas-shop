@@ -16,8 +16,11 @@
                     <img src="images/header/snowflake.svg" alt="" class="header__logo_image">
                     <small class="header__logo_text">THE GIFTS</small>
                 </div> </a>
-                <nav class="header__link">
-                    <a href="" class="header__link_items">GIFTS</a>
+                <div class="header__hamburger">
+                    <span class="header__burger"></span>
+                </div>
+                <nav id="header_navigation_id" class="header__link header__link_hidden">
+                    <a href="index2.html" class="header__link_items">GIFTS</a>
                     <a href="#aboutID" class="header__link_items">ABOUT</a>
                     <a href="#beastID" class="header__link_items">BEST</a>
                     <a href="#footerID" class="header__link_items">CONTACTS</a>
@@ -211,7 +214,7 @@
             <div class="cta__container">
                 <div class="cta__sub_container">
                     <h2 class="cta__header2">Ready to start your journey to a better version of yourself?</h2>
-                    <button class="cta__button">Explore Magical Gifts</button>
+                    <button onclick="document.location='index2.html'" class="cta__button">Explore Magical Gifts</button>
                     <div class="cta__sub_conteiner2">
                         <small class="cta__caption">The New Year is Coming Soon...</small>
                         <div class="cta__timer">
@@ -283,5 +286,6 @@
                 </div>
             </div>
         </div>
-    </footer>  
+    </footer> 
+    <script src="scripts/hamburger.js"></script> 
 </body>
