@@ -337,6 +337,9 @@ body {
                     color: #181C29;
                     margin: 9px 0px 0px 20px; 
                 }
+                &_header3:hover {
+                    color: $primary;
+                }
             }
         }
         &_card:hover {
@@ -379,6 +382,157 @@ body {
    &__card_header4--color12 {
     color: $tagPink;
    }
+
+   &__modal_background {
+    position: absolute;
+    background-color: #181C29;
+    opacity: 0.5;
+    width: 1440px;
+    height: 1954px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;  
+   }
+   &__modal_wrapper {
+    width: 400px;
+    height: 494px;
+    border-radius: 20px;
+    background-color: $contentBackground;
+    position: absolute;
+    top: 1;
+    right: 0;
+    left: 0;
+    margin: auto;  
+   }
+   &__modal_img_wrapper {
+    width: 400px;
+    height: 230px;
+    &_img {
+        width: 310px;
+        height: 230px;
+        @include flex-center();
+    }
+   }
+   &__modal_text_wrapper {
+    width: 360px;
+    height: 224px;
+    padding: 20px;
+    background-color: $staticWhite;
+    border-radius: 20px;
+    &_content {
+        width: 360px;
+        height: 104px;
+        color: #181C29;
+        &_head4 {
+            @include header4();
+            size: 12px;
+            margin-left: 0;  
+        }
+        &_head3 {
+            @include header3();
+            size: 16px;
+            margin-left: 0;
+        }
+        &_paragraph {
+            @include paragraph();
+            size: 16px;
+            margin-left: 0;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+   }
+   &__modal_text_wrapper_table {
+    color: $dark;
+    width: 360px;
+    height: 120px;
+    &_head4 {
+        @include header4();
+        margin-bottom: 8px;
+    }
+    &_content {
+        height: 24px;
+        @include paragraph();
+        size: 16px;
+        display: flex;
+        margin-left: -12px;
+        &_paragraph_par1 {
+            width: 184px; 
+        }
+        &_paragraph_img {
+            width: 112px;
+            height: 16px;
+        }
+    }
+   }
+   &__modal_work--color {
+    color: $tagPurle;
+   }
+   &__modal_harmony--color {
+    color: $tagPink;
+   }
+   &__modal_health--color {
+    color: $tagGreen;
+   }
+   &__close_modal {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        font-size: 50px;
+        right: 10px;
+        top: 0px;
+        color: $dark;
+        text-align: center;
+        cursor: pointer; 
+    }
+
+    &__background_hidden {
+        visibility: hidden;
+    }
+
+
+
+    &__close_modal:hover {
+        transform: scale(1.05);
+    }
+    &__modal_hidden1 {
+        visibility: hidden;
+    }
+    &__modal_hidden2 {
+        visibility: hidden;
+    }
+    &__modal_hidden3 {
+        visibility: hidden;
+    }
+    &__modal_hidden4 {
+        visibility: hidden;
+    }
+    &__modal_hidden5 {
+        visibility: hidden;
+    }
+    &__modal_hidden6 {
+        visibility: hidden;
+    }
+    &__modal_hidden7 {
+        visibility: hidden;
+    }
+    &__modal_hidden8 {
+        visibility: hidden;
+    }
+    &__modal_hidden9 {
+        visibility: hidden;
+    }
+    &__modal_hidden10 {
+        visibility: hidden;
+    }
+    &__modal_hidden11 {
+        visibility: hidden;
+    }
+    &__modal_hidden12 {
+        visibility: hidden;
+    }
 }
 
 .footer {
