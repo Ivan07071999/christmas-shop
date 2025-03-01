@@ -426,6 +426,7 @@ body {
   width: 1276px;
   height: 434px;
   z-index: 1;
+  margin-left: 82px;
 }
 .gifts__text-container {
   width: 426px;
@@ -1035,6 +1036,7 @@ body {
   .gifts__container {
     width: 752px;
     height: 788px;
+    margin-left: 8px;
   }
   .gifts__text-container {
     width: 426px;
