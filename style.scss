@@ -124,8 +124,7 @@ $overlay: #181C29CC;
     margin: 0 auto;
     padding: auto;
     scroll-behavior: smooth;
-
-
+   // outline: solid 1px red;
 }
 body {
     font-family: "Montserrat", "Allura"; 
@@ -157,18 +156,18 @@ body {
         width: 20px;
         background-color: $dark;
         transition: all 0.3s ease 0s;
-        top: 15px;
+        top: 16px;
         left: 10px;
     }
 
     &__hamburger::after {
-        top: 22px;
+        top: 24px;
         
     }
     &__hamburger_active::before {
         top: 21px;
         left: 10px;
-       transform: rotate(45deg) translate(0, 49%);
+       transform: rotate(45deg) translate(0, 50%);
     }
 
      &__hamburger_active::after {
@@ -177,13 +176,11 @@ body {
        height: 1px;
     }
    
-
     background-color: $staticWhite;
     &__wrapper {
         max-width: 1440px;
         height: 64px;
        @include flex-center();
-       
     }
     &__content {
         width: 1276px;
@@ -191,7 +188,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
     }
     &__logo {
         display: inline-block;
@@ -275,8 +271,6 @@ body {
         transform: translateY(-1px);
         }
     &__snow {
-        // width: 100%;
-        // height: 100%;
         position: absolute;
         z-index: 0;
     }
@@ -667,6 +661,19 @@ body {
         visibility: hidden;
     }
 
+    // &__modal_background {
+    //         width: 1440px;
+    //         height: 3442px;
+    //         background-color: $overlay;
+    //         position: absolute;
+    //         opacity: 0.7;
+    //         z-index: 2;
+    //         top: 0;
+    //     }
+    //     &__background_hidden {
+    //         visibility: hidden;
+    //     }
+
 }
 
 .cta {
@@ -680,6 +687,7 @@ body {
         width: 1440px;
         height: 668px;
         position: absolute;
+        display: block;
     }
     &__container {
         width: 1276px;
@@ -735,7 +743,6 @@ body {
         letter-spacing: 1.2px;
         color: $staticWhite;
         margin-left: 65px;
-
     }
     &__timer {
         width: 344px;
@@ -782,6 +789,7 @@ body {
         border-right: 1px solid $staticWhite40;  
     }
 }
+
 
 .footer {
     width: 1440px;
@@ -888,6 +896,7 @@ body {
 
 .hero__snow {
     width: 1440px;
+    display: block;
 }
 
  @media screen and (max-width: 768px) {
@@ -900,9 +909,7 @@ body {
             left: 720px;
             top: 12px;
         }
-        &__hamburger::after {
-            height: 2px;
-        }
+
         &__link {
             width: 768px;
             height: 960px;
@@ -913,7 +920,7 @@ body {
             position: absolute;
             align-items: center;
             top: -500px;
-            transform: translateY(564px);
+            transform: translateY(563px);
             background-color: $staticWhite;
             transition: all 0.5s ease-out 0s;
             &_items {
@@ -946,6 +953,7 @@ body {
     }
     .about {
         width: 768px;
+        height: 648px;
         &__content {
             width: 752px;
             height: 528px;
@@ -1034,6 +1042,10 @@ body {
         &__card {
             margin: 0px 0px 0px 0px;
         }
+        // &__modal_background {
+        //     width: 768px;
+        //     height: 4228px;
+        // }
     }
 
     .cta {
@@ -1084,4 +1096,292 @@ body {
         }
     }
 
+}
+
+@media screen and (max-width: 380px) {
+    .header {
+        width: 380px;
+        &__hamburger {
+            position: absolute;
+            left: 332px;
+            top: 11px;
+        }
+        &__link {
+            width: 380px;
+            height: 748px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            transform: translateY(563px);
+            background-color: $staticWhite;
+            transition: all 0.5s ease-out 0s;
+            &_items {
+                @include actionLarge();
+                size: 24px;
+                margin: 0;  
+            }
+        }
+        &__link_hidden {
+            visibility: hidden;
+        }
+        &__logo {
+            margin-left: 6px;
+        }
+    }
+
+    .hero {
+        width: 380px;
+        height: 572px;
+        &__ball {
+          width: 1367px;
+          height: 573px;
+          top: 0;
+          overflow-x: hidden;
+        }
+        &__snow {
+            width: 100%;
+            height: 100%;  
+        }
+        &__container {
+            width: 364px;
+            height: 452px;
+        }
+         &__caption {
+            width: 364px;
+            height: 24px;
+            text-align: center;
+        }
+         &__header1 {
+            width: 364px;
+            height: 192px;
+        }
+    }
+
+    .about {
+        width: 380px;
+        height: 1000px;
+        &__content {
+            width: 364px;
+            height: 880px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__container {
+            width: 364px;
+            height: 352px;
+           @include flex-center();
+             &--small-text {
+                margin: 0px 0px 0px 0px; 
+                width: 324px;
+                height: 352px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start; 
+            }
+        }
+        &__caption {
+            height: 24px;
+           margin: 60px 0px 0px 0px;
+
+        }
+        &__header2 {
+            height: 108px;
+           margin: 20px 0px 0px 0px;
+        }
+        &__paragraph {
+            height: 144px;
+            margin: 21px 0px 60px 0px;
+
+        }
+        &__img_container {
+            width: 364px;
+            height: 528px;
+           overflow: hidden;
+           @include flex-center();
+           border-radius: 20px;
+        }
+        &__santa_img {
+            //width: 200%;
+           // display: block;
+        }
+    }
+
+    .slider {
+        width: 380px;
+        height: 488px;
+        &__container {
+            width: 364px;
+            height: 368px;
+        }
+        &__text_content {
+            width: 364px;
+            height: 72px;
+        }
+        &__main {
+            width: 364px;
+            height: 200px;
+        }
+        &__buttons {
+            width: 364px;
+            height: 56px;
+            padding: 0px 0px 0px 0px;
+            text-align: end; 
+        }
+        &__header2 {
+            margin-top: 13px;
+            letter-spacing: 3.85px;
+            margin-left: 4px;
+        }
+    }
+    .gifts {
+        width: 380px;
+        height: 1616px;
+        &__container {
+            width: 364px;
+            height: 1496px;
+            margin: 0px 8px 2px 8px;
+        }
+        &__text-container {
+            width: 364px;
+            height: 72px;
+        }
+        &__card_container {
+            width: 364px;
+            height: 1404px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__card {
+            margin: 0px 0px 0px 0px;
+        }
+
+        &__modal_work {
+            width: 364px;
+            height: 514px;
+
+        }
+         &__front_img_modal {
+            margin-left: 24px;
+            
+        }
+         &__text_wrapper {
+            width: 364px;
+            height: 284px;
+        }
+         &__text_modal {
+            width: 324px;
+            height: 104px;  
+        }
+         &__header4_modal {
+            width: 76px;
+            height: 16px;
+            margin-left: 0px; 
+        }
+         &____header3_modal {
+            width: 324px;
+            height: 24px;  
+        }
+         &____paragraph_modal {
+            width: 24px;
+            height: 48px;  
+        }
+         &__information_modal {
+            width: 324px;
+            
+        }
+        &__subhead4_modal {
+            width: 324px;
+
+        }
+        &__table_modal {
+            width: 324px;
+            
+        }
+        &__table_info {
+            width: 324px;
+            
+        }
+        // &__modal_background {
+        //     width: 380px;
+        //     height: 5372px;
+           
+        // }
+       
+    }
+
+     .cta {
+        width: 380px;
+        height: 704px;
+        position: relative;
+        &__background {
+            z-index: 0;
+            height: 703px;
+            width: 1517px;
+            display: block;
+        }
+        overflow: hidden;
+        &__container {
+            width: 752px;
+            height: 548px;
+        }
+        &__sub_container {
+            width: 364px;
+            height: 464px;
+
+        }
+        &__header2 {
+            width: 364px;
+            height: 144px;
+        }
+        &__sub_conteiner2 {
+            width: 364px;
+            height: 104px;
+        }
+        &__caption {
+            margin-left: 34px;
+            
+        }
+        
+        &__timer_head {
+            margin: -17px 0px 0px 3px;
+        }
+        &__timer_subhead {
+            text-align: center;
+           // margin: -17px 0px 0px 3px;
+        }
+    }
+
+    .footer {
+        width: 380px;
+        height: 928px;
+        &__container {
+            width: 364px;
+            height: 808px;
+            &_cards {
+                width: 364px;
+                height: 636px;
+                display: flex;
+                flex-direction: column;
+            }
+            &_contacts {
+                width: 364px;
+                height: 112px;
+            }
+        }
+        &__cards_content {
+            width: 364px;
+        }
+        &__cards_head {
+            width: 324px;
+            margin: 18px 0px 0px 22px;
+        }
+        &__cards_subhead {
+            width: 324px;
+            padding-bottom: 0px;
+        }
+    }
 }

@@ -35,6 +35,7 @@ body {
   font-family: "Montserrat", "Allura";
   background-color: #FFFFFF;
   color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 .header {
@@ -68,7 +69,7 @@ body {
   left: 10px;
 }
 .header__hamburger::after {
-  top: 22px;
+  top: 23px;
 }
 .header__hamburger_active::before {
   top: 21px;
@@ -152,9 +153,6 @@ body {
 .header__link_items:nth-child(1) {
   width: 78px;
   margin-left: 6px;
-  background-color: rgba(255, 70, 70, 0.1019607843);
-  color: #FF4646;
-  pointer-events: none;
 }
 .header__link_items:nth-child(2) {
   width: 88px;
@@ -635,9 +633,6 @@ body {
     left: 720px;
     top: 12px;
   }
-  .header__hamburger::after {
-    height: 2px;
-  }
   .header__link {
     width: 768px;
     height: 960px;
@@ -665,5 +660,201 @@ body {
   }
   .header__logo {
     margin-left: 6px;
+  }
+  .gifts {
+    width: 768px;
+    height: 2456px;
+  }
+  .gifts__background {
+    width: 768px;
+    height: 108px;
+  }
+  .gifts__container {
+    width: 752px;
+    height: 2336px;
+  }
+  .gifts__container_cards_container {
+    width: 752px;
+    height: 2112px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gifts__container_cards_container_card {
+    margin: 0;
+  }
+  .gifts__modal_background {
+    width: 768px;
+  }
+  .footer {
+    width: 768px;
+    height: 928px;
+  }
+  .footer__container {
+    width: 752px;
+    height: 808px;
+  }
+  .footer__container_cards {
+    width: 752px;
+    height: 636px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__container_contacts {
+    width: 752px;
+    height: 112px;
+  }
+  .footer__cards_content {
+    width: 752px;
+  }
+  .footer__cards_head {
+    margin: 19px 0px 0px 190px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .header {
+    width: 380px;
+  }
+  .header__hamburger {
+    position: absolute;
+    left: 332px;
+    top: 11px;
+  }
+  .header__link {
+    width: 380px;
+    height: 748px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    transform: translateY(563px);
+    background-color: #FFFFFF;
+    transition: all 0.5s ease-out 0s;
+  }
+  .header__link_items {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    size: 24px;
+    margin: 0;
+  }
+  .header__link_hidden {
+    visibility: hidden;
+  }
+  .header__logo {
+    margin-left: 6px;
+  }
+  .gifts {
+    width: 380px;
+    height: 4676px;
+  }
+  .gifts__background {
+    width: 380px;
+    height: 53px;
+  }
+  .gifts__container {
+    width: 364px;
+    height: 4556px;
+  }
+  .gifts__container_header {
+    width: 364px;
+    height: 240px;
+  }
+  .gifts__container_tabs {
+    width: 354px;
+    height: 40px;
+    gap: 0px;
+  }
+  .gifts__container_tabs_tab:nth-child(1) {
+    width: 41px;
+  }
+  .gifts__container_tabs_tab:nth-child(2) {
+    width: 92px;
+  }
+  .gifts__container_tabs_tab:nth-child(3) {
+    width: 102px;
+  }
+  .gifts__container_tabs_tab:nth-child(4) {
+    width: 119px;
+  }
+  .gifts__container_cards_container {
+    width: 364px;
+    height: 4236px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gifts__container_cards_container_card {
+    margin: 0;
+  }
+  .gifts__modal_background {
+    width: 380px;
+  }
+  .gifts__modal_wrapper {
+    width: 364px;
+    height: 514px;
+  }
+  .gifts__modal_img_wrapper {
+    width: 364px;
+    height: 230px;
+  }
+  .gifts__modal_text_wrapper {
+    width: 324px;
+    height: 244px;
+  }
+  .gifts__modal_text_wrapper_content {
+    width: 324px;
+    height: 124px;
+  }
+  .gifts__modal_text_wrapper_content_head4 {
+    width: 324px;
+  }
+  .gifts__modal_text_wrapper_content_head3 {
+    width: 324px;
+  }
+  .gifts__modal_text_wrapper_content_paragraph {
+    width: 324px;
+  }
+  .gifts__modal_text_wrapper_table {
+    width: 324px;
+  }
+  .gifts__modal_text_wrapper_table_content {
+    width: 324px;
+    margin: 0px 0px 0px 0px;
+  }
+  .gifts__modal_text_wrapper_table_content_paragraph_par2 {
+    margin-right: 8px;
+  }
+  .footer {
+    width: 380px;
+    height: 928px;
+  }
+  .footer__container {
+    width: 364px;
+    height: 808px;
+  }
+  .footer__container_cards {
+    width: 364px;
+    height: 636px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__container_contacts {
+    width: 364px;
+    height: 112px;
+  }
+  .footer__cards_content {
+    width: 364px;
+  }
+  .footer__cards_head {
+    width: 324px;
+    margin: 18px 0px 0px 22px;
+  }
+  .footer__cards_subhead {
+    width: 324px;
+    padding-bottom: 0px;
   }
 }/*# sourceMappingURL=style2.css.map */

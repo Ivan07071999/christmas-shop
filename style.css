@@ -63,16 +63,16 @@ body {
   width: 20px;
   background-color: #181C29;
   transition: all 0.3s ease 0s;
-  top: 15px;
+  top: 16px;
   left: 10px;
 }
 .header__hamburger::after {
-  top: 22px;
+  top: 24px;
 }
 .header__hamburger_active::before {
   top: 21px;
   left: 10px;
-  transform: rotate(45deg) translate(0, 49%);
+  transform: rotate(45deg) translate(0, 50%);
 }
 .header__hamburger_active::after {
   top: 21px;
@@ -657,6 +657,7 @@ body {
   width: 1440px;
   height: 668px;
   position: absolute;
+  display: block;
 }
 .cta__container {
   width: 1276px;
@@ -904,6 +905,7 @@ body {
 
 .hero__snow {
   width: 1440px;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -916,9 +918,6 @@ body {
     left: 720px;
     top: 12px;
   }
-  .header__hamburger::after {
-    height: 2px;
-  }
   .header__link {
     width: 768px;
     height: 960px;
@@ -929,7 +928,7 @@ body {
     position: absolute;
     align-items: center;
     top: -500px;
-    transform: translateY(564px);
+    transform: translateY(563px);
     background-color: #FFFFFF;
     transition: all 0.5s ease-out 0s;
   }
@@ -963,6 +962,7 @@ body {
   }
   .about {
     width: 768px;
+    height: 648px;
   }
   .about__content {
     width: 752px;
@@ -1090,5 +1090,271 @@ body {
   }
   .footer__cards_head {
     margin: 19px 0px 0px 190px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .header {
+    width: 380px;
+  }
+  .header__hamburger {
+    position: absolute;
+    left: 332px;
+    top: 11px;
+  }
+  .header__link {
+    width: 380px;
+    height: 748px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    transform: translateY(563px);
+    background-color: #FFFFFF;
+    transition: all 0.5s ease-out 0s;
+  }
+  .header__link_items {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    size: 24px;
+    margin: 0;
+  }
+  .header__link_hidden {
+    visibility: hidden;
+  }
+  .header__logo {
+    margin-left: 6px;
+  }
+  .hero {
+    width: 380px;
+    height: 572px;
+  }
+  .hero__ball {
+    width: 1367px;
+    height: 573px;
+    top: 0;
+    overflow-x: hidden;
+  }
+  .hero__snow {
+    width: 100%;
+    height: 100%;
+  }
+  .hero__container {
+    width: 364px;
+    height: 452px;
+  }
+  .hero__caption {
+    width: 364px;
+    height: 24px;
+    text-align: center;
+  }
+  .hero__header1 {
+    width: 364px;
+    height: 192px;
+  }
+  .about {
+    width: 380px;
+    height: 1000px;
+  }
+  .about__content {
+    width: 364px;
+    height: 880px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about__container {
+    width: 364px;
+    height: 352px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__container--small-text {
+    margin: 0px 0px 0px 0px;
+    width: 324px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .about__caption {
+    height: 24px;
+    margin: 60px 0px 0px 0px;
+  }
+  .about__header2 {
+    height: 108px;
+    margin: 20px 0px 0px 0px;
+  }
+  .about__paragraph {
+    height: 144px;
+    margin: 21px 0px 60px 0px;
+  }
+  .about__img_container {
+    width: 364px;
+    height: 528px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .slider {
+    width: 380px;
+    height: 488px;
+  }
+  .slider__container {
+    width: 364px;
+    height: 368px;
+  }
+  .slider__text_content {
+    width: 364px;
+    height: 72px;
+  }
+  .slider__main {
+    width: 364px;
+    height: 200px;
+  }
+  .slider__buttons {
+    width: 364px;
+    height: 56px;
+    padding: 0px 0px 0px 0px;
+    text-align: end;
+  }
+  .slider__header2 {
+    margin-top: 13px;
+    letter-spacing: 3.85px;
+    margin-left: 4px;
+  }
+  .gifts {
+    width: 380px;
+    height: 1616px;
+  }
+  .gifts__container {
+    width: 364px;
+    height: 1496px;
+    margin: 0px 8px 2px 8px;
+  }
+  .gifts__text-container {
+    width: 364px;
+    height: 72px;
+  }
+  .gifts__card_container {
+    width: 364px;
+    height: 1404px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gifts__card {
+    margin: 0px 0px 0px 0px;
+  }
+  .gifts__modal_work {
+    width: 364px;
+    height: 514px;
+  }
+  .gifts__front_img_modal {
+    margin-left: 24px;
+  }
+  .gifts__text_wrapper {
+    width: 364px;
+    height: 284px;
+  }
+  .gifts__text_modal {
+    width: 324px;
+    height: 104px;
+  }
+  .gifts__header4_modal {
+    width: 76px;
+    height: 16px;
+    margin-left: 0px;
+  }
+  .gifts____header3_modal {
+    width: 324px;
+    height: 24px;
+  }
+  .gifts____paragraph_modal {
+    width: 24px;
+    height: 48px;
+  }
+  .gifts__information_modal {
+    width: 324px;
+  }
+  .gifts__subhead4_modal {
+    width: 324px;
+  }
+  .gifts__table_modal {
+    width: 324px;
+  }
+  .gifts__table_info {
+    width: 324px;
+  }
+  .cta {
+    width: 380px;
+    height: 704px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta__background {
+    z-index: 0;
+    height: 703px;
+    width: 1517px;
+    display: block;
+  }
+  .cta__container {
+    width: 752px;
+    height: 548px;
+  }
+  .cta__sub_container {
+    width: 364px;
+    height: 464px;
+  }
+  .cta__header2 {
+    width: 364px;
+    height: 144px;
+  }
+  .cta__sub_conteiner2 {
+    width: 364px;
+    height: 104px;
+  }
+  .cta__caption {
+    margin-left: 34px;
+  }
+  .cta__timer_head {
+    margin: -17px 0px 0px 3px;
+  }
+  .cta__timer_subhead {
+    text-align: center;
+  }
+  .footer {
+    width: 380px;
+    height: 928px;
+  }
+  .footer__container {
+    width: 364px;
+    height: 808px;
+  }
+  .footer__container_cards {
+    width: 364px;
+    height: 636px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__container_contacts {
+    width: 364px;
+    height: 112px;
+  }
+  .footer__cards_content {
+    width: 364px;
+  }
+  .footer__cards_head {
+    width: 324px;
+    margin: 18px 0px 0px 22px;
+  }
+  .footer__cards_subhead {
+    width: 324px;
+    padding-bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
