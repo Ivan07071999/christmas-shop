@@ -423,6 +423,7 @@ body {
         justify-content: start;
         margin-top: 20px; 
         gap: 20px;
+        transition: all 0.7s ease-out;
     }
     &__slide_text {
         @include sliderText();
@@ -452,6 +453,11 @@ body {
     &__arrow-button:hover {
         color: $primary;
         background-color: $staticWhite;
+    }
+      &__disabled_button {
+        color: $staticWhite40;
+        border-color: $staticWhite40;
+        pointer-events: none;
     }
     overflow: hidden;
 }
@@ -899,6 +905,7 @@ body {
     width: 1440px;
     display: block;
 }
+
 
  @media screen and (max-width: 768px) {
   
