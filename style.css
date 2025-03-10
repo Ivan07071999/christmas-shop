@@ -649,6 +649,130 @@ body {
 .gifts__modal4_hidden {
   visibility: hidden;
 }
+.gifts__modal_wrapper {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+.modal__content {
+  width: 400px;
+  height: 514px;
+  border-radius: 20px;
+  margin: 15% auto;
+  background-color: #ECF3F8;
+}
+.modal__content_img_wrapper {
+  content: "";
+  background-image: url(images/gifts/gift-for-work.png);
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 400px;
+  height: 230px;
+}
+.modal__content_text_wrapper {
+  padding: 20px;
+  width: 360px;
+  height: 244px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.modal__content_text_wrapper_head {
+  width: 360px;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal__content_text_wrapper_head_head4 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4361FF;
+  margin-left: 0;
+}
+.modal__content_text_wrapper_head_head3 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #181C29;
+  margin-left: 0;
+}
+.modal__content_text_wrapper_head_paragraph {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+}
+.modal__content_text_wrapper_subhead {
+  width: 360px;
+  height: 120px;
+  margin-top: 20px;
+  color: #181C29;
+}
+.modal__content_text_wrapper_subhead_subhead4 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.modal__content_text_wrapper_subhead_container {
+  width: 360px;
+  height: 94px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__content_text_wrapper_subhead_container_span1 {
+  width: 360px;
+  height: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal__content_text_wrapper_subhead_container_subPar {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 12px;
+}
+.modal__content_text_wrapper_subhead_container_img {
+  width: 112px;
+  height: 16px;
+  background-position: center;
+  background-size: contain;
+  margin: 0;
+  margin-top: 2px;
+}
+.modal__content_text_wrapper_subhead_container_img1 {
+  background-image: url(images/gifts/+500.png);
+}
+.modal__content_text_wrapper_subhead_container_img2 {
+  background-image: url(images/gifts/+500.png);
+}
+.modal__content_text_wrapper_subhead_container_img3 {
+  background-image: url(images/gifts/+200.png);
+}
+.modal__content_text_wrapper_subhead_container_img4 {
+  background-image: url(images/gifts/+400.png);
+}
 
 .cta {
   width: 1440px;
