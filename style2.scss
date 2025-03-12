@@ -309,7 +309,7 @@ body {
             }
         }
         &_tab:hover {
-            background-color: $staticWhite20;
+            background-color: $staticWhite20 !important;
         }
         &_tab:nth-child(1) {
             width: 65px;
@@ -473,7 +473,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
+     }
    }
    &__modal_text_wrapper_table {
     color: $dark;
@@ -523,7 +523,25 @@ body {
         visibility: hidden;
         transform: rotateY(90deg);  
     }
-    
+    &__scroll_up_button {
+        width: 56px;
+        height: 56px;
+        position: fixed;
+        border-radius: 50%;
+        border: 1px solid $primary;
+        background-color: $staticWhite;
+        color: $primary;
+        font-size: 24px;
+        bottom: 8px;
+        right: 8px;
+        cursor: pointer;
+        display: none;
+    }
+    &__scroll_up_button:hover {
+        color: $staticWhite;
+        background-color: $primary;
+        border-color: $staticWhite;
+    }
 }
 
 .modal {
@@ -662,7 +680,7 @@ body {
             position: absolute;
             align-items: center;
             top: -500px;
-            transform: translateY(564px);
+            transform: translateY(563px);
             background-color: $staticWhite;
             transition: all 0.5s ease-out 0s;
             &_items {

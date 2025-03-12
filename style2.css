@@ -234,7 +234,7 @@ body {
   letter-spacing: 0.7px;
 }
 .gifts__container_tabs_tab:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 .gifts__container_tabs_tab:nth-child(1) {
   width: 65px;
@@ -456,6 +456,25 @@ body {
   visibility: hidden;
   transform: rotateY(90deg);
 }
+.gifts__scroll_up_button {
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid #FF4646;
+  background-color: #FFFFFF;
+  color: #FF4646;
+  font-size: 24px;
+  bottom: 8px;
+  right: 8px;
+  cursor: pointer;
+  display: none;
+}
+.gifts__scroll_up_button:hover {
+  color: #FFFFFF;
+  background-color: #FF4646;
+  border-color: #FFFFFF;
+}
 
 .modal {
   position: fixed;
@@ -607,7 +626,7 @@ body {
     position: absolute;
     align-items: center;
     top: -500px;
-    transform: translateY(564px);
+    transform: translateY(563px);
     background-color: #FFFFFF;
     transition: all 0.5s ease-out 0s;
   }
