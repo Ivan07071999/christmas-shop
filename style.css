@@ -36,6 +36,13 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  background-color: #FF4646;
+  border-radius: 20px;
+  width: 1440px;
+  overflow: hidden;
+}
+
 .header {
   width: 1440px;
   background-color: #FFFFFF;
@@ -172,7 +179,8 @@ body {
 }
 
 .hero {
-  overflow: hidden;
+  background-image: url(images/hero/bg-snow.png);
+  background-size: contain;
   position: relative;
   width: 1440px;
   height: 524px;
@@ -253,6 +261,8 @@ body {
 }
 
 .about {
+  background-image: url(images/hero/bg-snow.png);
+  background-size: contain;
   width: 1440px;
   height: 648px;
   background-color: #FF4646;
@@ -328,6 +338,8 @@ body {
 }
 
 .slider {
+  background-image: url(images/hero/bg-snow.png);
+  background-size: contain;
   background-color: #FF4646;
   width: 1440px;
   height: 488px;
@@ -421,6 +433,8 @@ body {
 }
 
 .gifts {
+  background-image: url(images/hero/bg-snow.png);
+  background-size: contain;
   width: 1440px;
   height: 554px;
   background-color: #FF4646;
@@ -667,6 +681,8 @@ body {
 }
 
 .cta {
+  background-image: url(images/hero/bg-snow.png);
+  background-size: contain;
   width: 1440px;
   height: 668px;
   background-color: #FF4646;
@@ -932,6 +948,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    width: 768px;
+  }
   .header {
     width: 768px;
   }
@@ -1120,6 +1139,9 @@ body {
   }
 }
 @media screen and (max-width: 380px) {
+  main {
+    width: 380px;
+  }
   .header {
     width: 380px;
   }

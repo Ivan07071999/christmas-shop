@@ -131,6 +131,9 @@ body {
     overflow-x: hidden;
 }
 
+.scroll__block {
+    overflow: hidden;
+}
 .header {
     width: 1440px;
       &__hamburger {
@@ -347,6 +350,8 @@ body {
             &_img_wrapper {
                 width: 310px;
                 height: 230px;
+                //background-image: url(images/gifts/gift-for-work.png);
+                
                 &_img {
                     width: 100%;
                     height: 100%;
@@ -420,17 +425,7 @@ body {
     color: $tagPink;
    }
 
-   &__modal_background {
-    position: absolute;
-    background-color: #181C29;
-    opacity: 0.5;
-    width: 1440px;
-    height: 1954px;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: auto;  
-   }
+ 
    &__modal_wrapper {
     width: 400px;
     height: 494px;
@@ -440,11 +435,16 @@ body {
     top: 1;
     right: 0;
     left: 0;
-    margin: auto;  
+    margin: 15% auto;  
+    transform: rotateY(0deg);
+    
    }
    &__modal_img_wrapper {
     width: 400px;
     height: 230px;
+    background-image: url(images/gifts/gift-for-work.png);
+    background-position: center;
+    background-size: cover;
     &_img {
         width: 310px;
         height: 230px;
@@ -504,15 +504,7 @@ body {
         }
     }
    }
-   &__modal_work--color {
-    color: $tagPurle;
-   }
-   &__modal_harmony--color {
-    color: $tagPink;
-   }
-   &__modal_health--color {
-    color: $tagGreen;
-   }
+
    &__close_modal {
         width: 40px;
         height: 40px;
@@ -530,46 +522,27 @@ body {
     }
 
 
-
     &__close_modal:hover {
         transform: scale(1.05);
     }
     &__modal_hidden1 {
         visibility: hidden;
+        transform: rotateY(90deg);  
     }
-    &__modal_hidden2 {
-        visibility: hidden;
-    }
-    &__modal_hidden3 {
-        visibility: hidden;
-    }
-    &__modal_hidden4 {
-        visibility: hidden;
-    }
-    &__modal_hidden5 {
-        visibility: hidden;
-    }
-    &__modal_hidden6 {
-        visibility: hidden;
-    }
-    &__modal_hidden7 {
-        visibility: hidden;
-    }
-    &__modal_hidden8 {
-        visibility: hidden;
-    }
-    &__modal_hidden9 {
-        visibility: hidden;
-    }
-    &__modal_hidden10 {
-        visibility: hidden;
-    }
-    &__modal_hidden11 {
-        visibility: hidden;
-    }
-    &__modal_hidden12 {
-        visibility: hidden;
-    }
+    
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    z-index: 3;
+    transition: all 0.5s;
+    
 }
 
 .footer {

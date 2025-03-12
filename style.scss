@@ -129,7 +129,17 @@ $overlay: #181C29CC;
 body {
     font-family: "Montserrat", "Allura"; 
     overflow-x: hidden;
+    
+   
 }
+
+main {
+    background-color: $primary;
+    border-radius: 20px;
+    width: 1440px;
+    overflow: hidden;
+}
+
 
 .header {
     width: 1440px;
@@ -256,7 +266,8 @@ body {
 }
 
 .hero {
-        overflow: hidden;
+        background-image:  url(images/hero/bg-snow.png);
+        background-size: contain;
         position: relative;
         width: 1440px;
         height: 524px;
@@ -317,6 +328,8 @@ body {
 }
 
 .about {
+    background-image:  url(images/hero/bg-snow.png);
+    background-size: contain;
     width: 1440px;
     height: 648px;
     background-color: $primary;
@@ -388,6 +401,8 @@ body {
     color: $staticWhite;
 }
 .slider {
+    background-image:  url(images/hero/bg-snow.png);
+    background-size: contain;
     background-color: $primary;
     width: 1440px;
     height: 488px;
@@ -463,6 +478,8 @@ body {
 }
 
 .gifts {
+    background-image:  url(images/hero/bg-snow.png);
+    background-size: contain;
     width: 1440px;
     height: 554px;
     background-color: $primary;
@@ -683,8 +700,9 @@ body {
         visibility: hidden;
         transform: rotateY(90deg);
     }
-
+// background-image: url(images/gifts/gift-for-health.png);
 }
+
 
 // .modal {
 //     position: fixed;
@@ -803,6 +821,8 @@ body {
 
 
 .cta {
+    background-image:  url(images/hero/bg-snow.png);
+    background-size: contain;
     width: 1440px;
     height: 668px;
     background-color: $primary;
@@ -1027,6 +1047,10 @@ body {
 
 
  @media screen and (max-width: 768px) {
+
+    main {
+        width: 768px;
+    }
   
     .header {
         width: 768px;
@@ -1180,8 +1204,11 @@ body {
         width: 768px;
         height: 668px;
         position: relative;
+       
+        
         &__background {
-            z-index: 0;
+         z-index: 0;
+            
             
 
         }
@@ -1227,6 +1254,9 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+     main {
+        width: 380px;
+    }
     .header {
         width: 380px;
         &__hamburger {
