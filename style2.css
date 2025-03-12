@@ -38,10 +38,6 @@ body {
   overflow-x: hidden;
 }
 
-.scroll__block {
-  overflow: hidden;
-}
-
 .header {
   width: 1440px;
   background-color: #FFFFFF;

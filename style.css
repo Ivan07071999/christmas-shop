@@ -942,11 +942,6 @@ main {
   height: 24px;
 }
 
-.hero__snow {
-  width: 1440px;
-  display: block;
-}
-
 @media screen and (max-width: 768px) {
   main {
     width: 768px;

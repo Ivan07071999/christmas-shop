@@ -22,6 +22,7 @@ function rollSlider() {
     };
 
     if (window.screen.width <= 768 && window.screen.width > 380 ) {
+        
         let move = (sliderLength - 768 )/rangeSlider[768];
         slider.style.transform = `translateX(-${move * count}px)`;
 
