@@ -556,13 +556,25 @@ body {
     &__header4--color4 {
         color: $tagPink;
     }
+    &__modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9999;
+    transition: all 1s;
+    }
     &__modal_work {
         width: 400px;
         height: 514px;
-        position: absolute;
+        margin: 10% auto;
         z-index: 2;
         background-color: $contentBackground;
         border-radius: 20px;
+        transform: rotateY(0deg);
     }
     &__front_img_modal {
         width: 310px;
@@ -647,7 +659,7 @@ body {
         position: absolute;
         font-size: 50px;
         right: 10px;
-        top: 0px;
+        top: 0;
         color: $dark;
         text-align: center;
         cursor: pointer; 
@@ -657,159 +669,136 @@ body {
     }
     &__modal1_hidden {
         visibility: hidden;
+        transform: rotateY(90deg);
     }
     &__modal2_hidden {
         visibility: hidden;
+        transform: rotateY(90deg);
     }
     &__modal3_hidden {
         visibility: hidden;
+        transform: rotateY(90deg);
     }
     &__modal4_hidden {
         visibility: hidden;
-    }
-
-    // &__modal_background {
-    //         width: 1440px;
-    //         height: 3442px;
-    //         background-color: $overlay;
-    //         position: absolute;
-    //         opacity: 0.7;
-    //         z-index: 2;
-    //         top: 0;
-    //     }
-    //     &__background_hidden {
-    //         visibility: hidden;
-    //     }
-    &__modal_wrapper {
-         
-            position: fixed; 
-            z-index: 10; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-           // overflow: auto; 
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.4);
-    }
-
-
-
-}
-
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
-    z-index: 9999;
-    &__content {
-        width: 400px;
-        height: 514px;
-        border-radius: 20px;
-        margin: 15% auto;
-        background-color: $contentBackground;
-        &_img_wrapper {
-            content: '';
-            background-image: url(images/gifts/gift-for-work.png);
-            background-position: center;
-            background-size: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            width: 400px;
-            height: 230px;  
-        }
-        &_text_wrapper {
-            padding: 20px;
-            width: 360px;
-            height: 244px;
-            border-radius: 20px;
-            background-color: $staticWhite;
-            &_head {
-                width: 360px;
-                height: 104px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                
-                
-                
-                &_head4 {
-                    @include header4();
-                    color: $tagPurle;
-                    margin-left: 0;
-                    
-                }
-                &_head3 {
-                    @include header3();
-                    color: $dark;
-                    margin-left: 0;
-                   
-                }
-                &_paragraph {
-                    @include paragraph();
-                   
-                }
-            }
-            &_subhead {
-                width: 360px;
-                height: 120px;
-                margin-top: 20px;
-                color: $dark;
-                &_subhead4 {
-                    @include header4();
-                    
-                }
-                &_container {
-                    width: 360px;
-                    height: 94px;
-                    margin-top: 8px;
-                    display: flex;
-                    flex-direction: column;
-                    
-                    &_span1 {
-                        width: 360px;
-                        height: 24px;
-                        display: flex;
-                        justify-content: flex-end;  
-                    }
-
-                    &_subPar {
-                        @include paragraph();
-                        margin-right: 12px;
-                    }
-
-                    &_img {
-                        width: 112px;
-                        height: 16px;
-                        background-position: center;
-                        background-size: contain;
-                        margin: 0;
-                        margin-top: 2px;
-                    }
-                    &_img1 {
-                        background-image: url(images/gifts/+500.png);
-                    }
-                    &_img2 {
-                        background-image: url(images/gifts/+500.png);
-                    }
-                    &_img3 {
-                        background-image: url(images/gifts/+200.png);
-                    }
-
-                    &_img4 {
-                        background-image: url(images/gifts/+400.png);
-                    }
-
-                }
-            }
-        }
+        transform: rotateY(90deg);
     }
 
 }
+
+// .modal {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgb(0,0,0); 
+//     background-color: rgba(0,0,0,0.4);
+//     z-index: 9999;
+//     &__content {
+//         width: 400px;
+//         height: 514px;
+//         border-radius: 20px;
+//         margin: 15% auto;
+//         background-color: $contentBackground;
+//         &_img_wrapper {
+//             content: '';
+//             background-image: url(images/gifts/gift-for-work.png);
+//             background-position: center;
+//             background-size: cover;
+//             border-top-left-radius: 20px;
+//             border-top-right-radius: 20px;
+//             width: 400px;
+//             height: 230px;  
+//         }
+//         &_text_wrapper {
+//             padding: 20px;
+//             width: 360px;
+//             height: 244px;
+//             border-radius: 20px;
+//             background-color: $staticWhite;
+//             &_head {
+//                 width: 360px;
+//                 height: 104px;
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: space-between;
+                
+                
+                
+//                 &_head4 {
+//                     @include header4();
+//                     color: $tagPurle;
+//                     margin-left: 0;
+                    
+//                 }
+//                 &_head3 {
+//                     @include header3();
+//                     color: $dark;
+//                     margin-left: 0;
+                   
+//                 }
+//                 &_paragraph {
+//                     @include paragraph();
+                   
+//                 }
+//             }
+//             &_subhead {
+//                 width: 360px;
+//                 height: 120px;
+//                 margin-top: 20px;
+//                 color: $dark;
+//                 &_subhead4 {
+//                     @include header4();
+                    
+//                 }
+//                 &_container {
+//                     width: 360px;
+//                     height: 94px;
+//                     margin-top: 8px;
+//                     display: flex;
+//                     flex-direction: column;
+                    
+//                     &_span1 {
+//                         width: 360px;
+//                         height: 24px;
+//                         display: flex;
+//                         justify-content: flex-end;  
+//                     }
+
+//                     &_subPar {
+//                         @include paragraph();
+//                         margin-right: 12px;
+//                     }
+
+//                     &_img {
+//                         width: 112px;
+//                         height: 16px;
+//                         background-position: center;
+//                         background-size: contain;
+//                         margin: 0;
+//                         margin-top: 2px;
+//                     }
+//                     &_img1 {
+//                         background-image: url(images/gifts/+500.png);
+//                     }
+//                     &_img2 {
+//                         background-image: url(images/gifts/+500.png);
+//                     }
+//                     &_img3 {
+//                         background-image: url(images/gifts/+200.png);
+//                     }
+
+//                     &_img4 {
+//                         background-image: url(images/gifts/+400.png);
+//                     }
+
+//                 }
+//             }
+//         }
+//     }
+
+// }
 
 
 
@@ -1181,10 +1170,10 @@ body {
         &__card {
             margin: 0px 0px 0px 0px;
         }
-        // &__modal_background {
-        //     width: 768px;
-        //     height: 4228px;
-        // }
+             &__modal_work {
+            margin: 20% auto;
+        }
+
     }
 
     .cta {
@@ -1401,7 +1390,7 @@ body {
         &__modal_work {
             width: 364px;
             height: 514px;
-
+            margin: 20% auto;
         }
          &__front_img_modal {
             margin-left: 24px;
@@ -1441,15 +1430,8 @@ body {
             
         }
         &__table_info {
-            width: 324px;
-            
+            width: 324px; 
         }
-        // &__modal_background {
-        //     width: 380px;
-        //     height: 5372px;
-           
-        // }
-       
     }
 
      .cta {
@@ -1490,7 +1472,6 @@ body {
         }
         &__timer_subhead {
             text-align: center;
-           // margin: -17px 0px 0px 3px;
         }
     }
 
