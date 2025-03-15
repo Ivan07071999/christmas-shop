@@ -54,6 +54,7 @@ function createCards(data) {
         nameCard.className = 'gifts__card_text_container_name';
         nameCard.textContent = item.name;
         textCardContainer.appendChild(nameCard);  
+
         
        //console.log(item.category)
 
@@ -83,7 +84,7 @@ function createCards(data) {
         modalCategory.className = 'gifts__modal_text_wrapper_content_head4';
         modalCategory.textContent = item.category;
         modalTextContent.appendChild(modalCategory);
-        console.log(modalCategory.textContent)
+        //console.log(modalCategory.textContent)
         createImage(modalCategory, modalImageContainer) 
         createColor(modalCategory)
 
@@ -167,8 +168,8 @@ function createCards(data) {
 
     scrollController.enabledScroll();
   
-  });
- };
+        });
+    };
 };
 
 createCards()
@@ -204,3 +205,4 @@ function createImage(modalCategory, modalImageContainer) {
 };
 
 document.addEventListener('DOMContentLoaded', loadJSON);
+
