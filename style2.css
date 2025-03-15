@@ -153,6 +153,8 @@ body {
 .header__link_items:nth-child(1) {
   width: 78px;
   margin-left: 6px;
+  background-color: rgba(255, 70, 70, 0.1019607843);
+  color: #FF4646;
 }
 .header__link_items:nth-child(2) {
   width: 88px;
@@ -173,12 +175,12 @@ body {
 
 .gifts {
   width: 1440px;
-  height: 1394px;
   background-color: #FF4646;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 60px;
 }
 .gifts__background {
   width: 1440px;
@@ -189,7 +191,6 @@ body {
 }
 .gifts__container {
   width: 1276px;
-  height: 1274px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -222,6 +223,7 @@ body {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  z-index: 1;
 }
 .gifts__container_tabs_tab_childe {
   font-family: "Montserrat";
@@ -251,18 +253,17 @@ body {
 }
 .gifts__container_cards_container {
   width: 1276px;
-  height: 1050px;
   display: grid;
   grid-template-columns: repeat(4, 310px);
   grid-template-rows: repeat(3, 342px);
   gap: 12px;
 }
 .gifts__container_cards_container_card {
-  cursor: pointer;
   width: 310px;
   height: 342px;
   border-radius: 20px;
   background-color: #ECF3F8;
+  cursor: pointer;
 }
 .gifts__container_cards_container_card_img_wrapper {
   width: 310px;
@@ -304,45 +305,6 @@ body {
 .gifts__container_cards_container_card_text_header3:hover {
   color: #FF4646;
 }
-.gifts__container_cards_container_card:hover {
-  transform: scale(1.01);
-}
-.gifts__card_header4--color1 {
-  color: #4361FF;
-}
-.gifts__card_header4--color2 {
-  color: #06A44F;
-}
-.gifts__card_header4--color3 {
-  color: #4361FF;
-}
-.gifts__card_header4--color4 {
-  color: #4361FF;
-}
-.gifts__card_header4--color5 {
-  color: #06A44F;
-}
-.gifts__card_header4--color6 {
-  color: #FF43F7;
-}
-.gifts__card_header4--color7 {
-  color: #06A44F;
-}
-.gifts__card_header4--color8 {
-  color: #FF43F7;
-}
-.gifts__card_header4--color9 {
-  color: #06A44F;
-}
-.gifts__card_header4--color10 {
-  color: #4361FF;
-}
-.gifts__card_header4--color11 {
-  color: #FF43F7;
-}
-.gifts__card_header4--color12 {
-  color: #FF43F7;
-}
 .gifts__modal_wrapper {
   width: 400px;
   height: 494px;
@@ -353,12 +315,12 @@ body {
   right: 0;
   left: 0;
   margin: 15% auto;
-  transform: rotateY(0deg);
+  opacity: 1;
 }
 .gifts__modal_img_wrapper {
   width: 400px;
   height: 230px;
-  background-image: url(images/gifts/gift-for-work.png);
+  background-image: url(images/gifts/gift-for-harmony.png);
   background-position: center;
   background-size: cover;
 }
@@ -426,25 +388,30 @@ body {
   font-weight: 400;
   size: 16px;
   display: flex;
-  margin-left: -12px;
+  align-items: center;
 }
 .gifts__modal_text_wrapper_table_content_paragraph_par1 {
   width: 184px;
+  margin-left: 0;
+}
+.gifts__modal_text_wrapper_table_content_paragraph_par2 {
+  width: 40px;
 }
 .gifts__modal_text_wrapper_table_content_paragraph_img {
   width: 112px;
   height: 16px;
+  background-image: url(images/gifts/+400.png);
 }
 .gifts__close_modal {
-  width: 40px;
-  height: 40px;
+  padding: 5px;
   position: absolute;
-  font-size: 50px;
+  font-size: 30px;
   right: 10px;
   top: 0px;
   color: #181C29;
   text-align: center;
   cursor: pointer;
+  z-index: 3;
 }
 .gifts__background_hidden {
   visibility: hidden;
@@ -475,6 +442,45 @@ body {
   background-color: #FF4646;
   border-color: #FFFFFF;
 }
+.gifts__card {
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background-color: #ECF3F8;
+  cursor: pointer;
+}
+.gifts__card_img_container {
+  width: 310px;
+  height: 230px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url(images/gifts/gift-for-work.png);
+  background-size: cover;
+}
+.gifts__card_text_container {
+  width: 270px;
+  height: 73px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px;
+  color: #181C29;
+}
+.gifts__card_text_container_category {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.gifts__card_text_container_name {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.gifts__card:hover .gifts__card_text_container_name {
+  color: #FF4646;
+}
 
 .modal {
   position: fixed;
@@ -484,8 +490,17 @@ body {
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 3;
-  transition: all 0.5s;
+  z-index: 1;
+  visibility: hidden;
+  transition: all 2s ease 0s;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.modal__show {
+  transition: all 2s ease 0s;
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  transition: all 0.8s ease 0s;
+  visibility: visible;
 }
 
 .footer {
@@ -646,7 +661,6 @@ body {
   }
   .gifts {
     width: 768px;
-    height: 2456px;
   }
   .gifts__background {
     width: 768px;
@@ -654,20 +668,15 @@ body {
   }
   .gifts__container {
     width: 752px;
-    height: 2336px;
   }
   .gifts__container_cards_container {
     width: 752px;
-    height: 2112px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .gifts__container_cards_container_card {
+  .gifts__card {
     margin: 0;
-  }
-  .gifts__modal_background {
-    width: 768px;
   }
   .footer {
     width: 768px;
@@ -732,7 +741,6 @@ body {
   }
   .gifts {
     width: 380px;
-    height: 4676px;
   }
   .gifts__background {
     width: 380px;
@@ -740,7 +748,6 @@ body {
   }
   .gifts__container {
     width: 364px;
-    height: 4556px;
   }
   .gifts__container_header {
     width: 364px;
@@ -765,7 +772,6 @@ body {
   }
   .gifts__container_cards_container {
     width: 364px;
-    height: 4236px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -802,14 +808,14 @@ body {
     width: 324px;
   }
   .gifts__modal_text_wrapper_table {
+    margin: 0;
     width: 324px;
   }
-  .gifts__modal_text_wrapper_table_content {
-    width: 324px;
-    margin: 0px 0px 0px 0px;
+  .gifts__modal_text_wrapper_table_content_paragraph_par1 {
+    width: 148px;
   }
   .gifts__modal_text_wrapper_table_content_paragraph_par2 {
-    margin-right: 8px;
+    width: 40px;
   }
   .footer {
     width: 380px;

@@ -2,8 +2,9 @@ const allCards = document.querySelector('[data-js-all-cards]');
 const forWork = document.querySelector('[data-js-for-work]');
 const forHealth = document.querySelector('[data-js-for-health]');
 const forHarmony = document.querySelector('[data-js-for-harmony]');
-const cardsContainer = document.querySelector('[data-js-cards-container]');
-let cards = document.querySelectorAll('.gifts__container_cards_container_card');
+//const cardsContainer = document.querySelector('[data-js-cards-container]');
+let cards = document.querySelectorAll('.gifts__card');
+// let cards = document.querySelectorAll('.gifts__container_cards_container_card');
 let cardsArray = Array.from(cards);
 
 function removeCards() {
@@ -11,6 +12,10 @@ function removeCards() {
     cardsContainer.removeChild(cardsContainer.firstChild);
     };
 };
+
+for (let i = 0; i < cardsArray.length; i++) {
+    console.log(cardsArray[i].textContent)
+}
 
 function setAllCards() {
     cardsArray.map(card =>  cardsContainer.appendChild(card));
