@@ -995,24 +995,22 @@ main {
         }
         &__caption {
             height: 24px;
-           margin: 60px 0px 0px 0px;
-
+            margin: 60px 0px 0px 0px;
         }
         &__header2 {
             height: 108px;
-           margin: 20px 0px 0px 0px;
+            margin: 20px 0px 0px 0px;
         }
         &__paragraph {
             height: 144px;
             margin: 21px 0px 60px 0px;
-
         }
         &__img_container {
             width: 376px;
             height: 528px;
-           overflow: hidden;
-           @include flex-center();
-           border-radius: 20px;
+            overflow: hidden;
+            @include flex-center();
+            border-radius: 20px;
         }
         &__santa_img {
             width: 200%;
@@ -1067,7 +1065,6 @@ main {
              &__modal_work {
             margin: 20% auto;
         }
-
     }
 
     .cta {

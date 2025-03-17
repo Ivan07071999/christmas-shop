@@ -261,7 +261,6 @@ body {
 
 .gifts {
     width: 1440px;
-   // height: 1394px;
     background-color: $primary;
     border-radius: 20px;
     @include flex-center();
@@ -319,13 +318,9 @@ body {
         &_tab:nth-child(1) {
             width: 65px;
             background-color: $staticWhite20;
-
-
         }
         &_tab:nth-child(2) {
             width: 116px;
-
-
         }
         &_tab:nth-child(3) {
             width: 126px;
@@ -333,12 +328,10 @@ body {
         }
         &_tab:nth-child(4) {
             width: 143px;
-
         }
     }
     &__container_cards_container {
         width: 1276px;
-       // height: 1050px;
         display: grid;
         grid-template-columns: repeat(4, 310px);
         grid-template-rows: repeat(3, 342px);
@@ -386,6 +379,7 @@ body {
             }
         }
     }
+
    &__card_header4--color1 {
     color: $tagPurle;
    }
@@ -423,7 +417,6 @@ body {
     color: $tagPink;
    }
 
- 
    &__modal_wrapper {
     width: 400px;
     height: 494px;
@@ -434,8 +427,7 @@ body {
     right: 0;
     left: 0;
     margin: 15% auto;  
-   opacity: 1;
-   
+    opacity: 1;
    }
   
    &__modal_img_wrapper {
@@ -505,8 +497,7 @@ body {
         &_paragraph_img {
             width: 112px;
             height: 16px;
-            background-image: url(images/gifts/+400.png);
-           
+            background-image: url(images/gifts/+400.png); 
         }
     }
    }
@@ -522,12 +513,9 @@ body {
     cursor: pointer; 
     z-index: 3;   
     }
-
     &__background_hidden {
         visibility: hidden;
     }
-
-
     &__close_modal:hover {
         transform: scale(1.05);
     }
@@ -554,7 +542,6 @@ body {
         background-color: $primary;
         border-color: $staticWhite;
     }
-
     &__card {
         width: 310px;
         height: 342px;
@@ -577,8 +564,7 @@ body {
             padding: 20px;
             color: $dark;
             &_category {
-                @include header4();
-                
+                @include header4();  
             }
             &_name {
                 @include header3();
@@ -612,8 +598,6 @@ body {
     transition: all 0.8s ease 0s;
     visibility: visible;
 }
-
-
 
 .footer {
     width: 1440px;
@@ -662,7 +646,6 @@ body {
         @include actionLarge();
         margin-left: 22px;
         margin-top: 19px;
-        
     }
     &__cards_subhead {
         width: 377.33px;
@@ -757,7 +740,6 @@ body {
 
     .gifts {
         width: 768px;
-        //height: 2456px;
         &__background {
             width: 768px;
             height: 108px;
@@ -765,20 +747,16 @@ body {
         }
         &__container {
             width: 752px;
-           // height: 2336px;
         }
         &__container_cards_container {
             width: 752px;
-           // height: 2112px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center; 
         }
         &__card {
-                margin: 0;
-            }
-
-  
+            margin: 0;
+        }
     }
 
     .footer {
@@ -846,7 +824,6 @@ body {
 
     .gifts {
         width: 380px;
-        //height: 4676px;
         &__background {
             width: 380px;
             height: 53px;
@@ -854,8 +831,6 @@ body {
         }
         &__container {
             width: 364px;
-          //  height: 4556px;
-
             &_header {
                 width: 364px;
                 height: 240px;
@@ -881,13 +856,11 @@ body {
         }
         &__container_cards_container {
             width: 364px;
-          //  height: 4236px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             &_card {
                 margin: 0;
-
             }
         }
         &__modal_background {

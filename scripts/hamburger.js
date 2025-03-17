@@ -34,7 +34,7 @@ function hiddenHamburger() {
 hiddenHamburger();
 
 function toggleBtn() {
-    // console.log(navigationID.classList.contains('header__link_hidden'))
+
     if (navigationID.classList.contains('header__link_hidden')) {
         scrollController.enabledScroll();
     } else {
