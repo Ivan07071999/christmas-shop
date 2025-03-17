@@ -190,10 +190,12 @@ body {
   top: 64px;
 }
 .gifts__container {
+  margin-top: 60px;
   width: 1276px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 0;
 }
 .gifts__container_header {
   width: 426px;
@@ -304,6 +306,42 @@ body {
 }
 .gifts__container_cards_container_card_text_header3:hover {
   color: #FF4646;
+}
+.gifts__card_header4--color1 {
+  color: #4361FF;
+}
+.gifts__card_header4--color2 {
+  color: #06A44F;
+}
+.gifts__card_header4--color3 {
+  color: #4361FF;
+}
+.gifts__card_header4--color4 {
+  color: #4361FF;
+}
+.gifts__card_header4--color5 {
+  color: #06A44F;
+}
+.gifts__card_header4--color6 {
+  color: #FF43F7;
+}
+.gifts__card_header4--color7 {
+  color: #06A44F;
+}
+.gifts__card_header4--color8 {
+  color: #FF43F7;
+}
+.gifts__card_header4--color9 {
+  color: #06A44F;
+}
+.gifts__card_header4--color10 {
+  color: #4361FF;
+}
+.gifts__card_header4--color11 {
+  color: #FF43F7;
+}
+.gifts__card_header4--color12 {
+  color: #FF43F7;
 }
 .gifts__modal_wrapper {
   width: 400px;

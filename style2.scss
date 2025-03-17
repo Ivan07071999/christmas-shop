@@ -274,11 +274,13 @@ body {
         top: 64px;
     }
     &__container {
+        margin-top: 60px;
         width: 1276px;
        // height: 1274px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        z-index: 0;
     }
     &__container_header {
         width: 426px;
@@ -383,46 +385,43 @@ body {
                 }
             }
         }
-        // &_card:hover {
-        //     //transform: scale(1.01);
-        // }
     }
-//    &__card_header4--color1 {
-//     color: $tagPurle;
-//    }
-//    &__card_header4--color2 {
-//     color: $tagGreen;
-//    }
-//    &__card_header4--color3 {
-//     color: $tagPurle;
-//    }
-//    &__card_header4--color4 {
-//     color: $tagPurle;
-//    }
-//    &__card_header4--color5 {
-//     color: $tagGreen;
-//    }
-//    &__card_header4--color6 {
-//     color: $tagPink;
-//    }
-//    &__card_header4--color7 {
-//     color: $tagGreen;
-//    }
-//    &__card_header4--color8 {
-//     color: $tagPink;
-//    }
-//    &__card_header4--color9 {
-//     color: $tagGreen;
-//    }
-//    &__card_header4--color10 {
-//     color: $tagPurle;
-//    }
-//    &__card_header4--color11 {
-//     color: $tagPink;
-//    }
-//    &__card_header4--color12 {
-//     color: $tagPink;
-//    }
+   &__card_header4--color1 {
+    color: $tagPurle;
+   }
+   &__card_header4--color2 {
+    color: $tagGreen;
+   }
+   &__card_header4--color3 {
+    color: $tagPurle;
+   }
+   &__card_header4--color4 {
+    color: $tagPurle;
+   }
+   &__card_header4--color5 {
+    color: $tagGreen;
+   }
+   &__card_header4--color6 {
+    color: $tagPink;
+   }
+   &__card_header4--color7 {
+    color: $tagGreen;
+   }
+   &__card_header4--color8 {
+    color: $tagPink;
+   }
+   &__card_header4--color9 {
+    color: $tagGreen;
+   }
+   &__card_header4--color10 {
+    color: $tagPurle;
+   }
+   &__card_header4--color11 {
+    color: $tagPink;
+   }
+   &__card_header4--color12 {
+    color: $tagPink;
+   }
 
  
    &__modal_wrapper {
@@ -435,11 +434,8 @@ body {
     right: 0;
     left: 0;
     margin: 15% auto;  
-   // transform: rotateY(0deg);
    opacity: 1;
    
-   //transition: all 0.8s ease 0s; 
-  
    }
   
    &__modal_img_wrapper {

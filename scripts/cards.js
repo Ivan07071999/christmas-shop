@@ -1,37 +1,41 @@
  async function loadJSON() {
-       try {
-           const response = await fetch('scripts/gifts.json'); 
-           if (!response.ok) {
-               throw new Error('Network response was not ok ' + response.statusText);
-           }
-           const data = await response.json(); 
-          // console.log(data); 
-           
-        createCards(data);
-       } catch (error) {
-           console.error('Error', error);
-       }
-   }
+    try {
+        const response = await fetch('scripts/gifts.json'); 
 
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        };
 
-   loadJSON();
+        const data = await response.json(); 
+        return data;
 
-const cardsContainer = document.querySelector('[data-js-cards-container]');
-// console.log(cardsContainer)
-   function removeCards() {
-    while (cardsContainer.firstChild) {
-    cardsContainer.removeChild(cardsContainer.firstChild);
+    } catch (error) {
+        console.error('Error', error);
     };
 };
 
-removeCards();
+const giftsList = await loadJSON();
+  
+const allCards = document.querySelector('[data-js-all-cards]');
+const forWork = document.querySelector('[data-js-for-work]');
+const forHealth = document.querySelector('[data-js-for-health]');
+const forHarmony = document.querySelector('[data-js-for-harmony]');
+const cardsContainer = document.querySelector('[data-js-cards-container]');
 
-function createCards(data) {
+   function removeCards() {
+    while (cardsContainer.firstChild) {
+        cardsContainer.removeChild(cardsContainer.firstChild);
+    };
+};
+
+async function createCards(data) {
+    removeCards();
+
     for (let i = 0; i < data.length; i ++) {
         const item = data[i]
-        //console.log(item)
 
         //Cards
+
         const card = document.createElement('div');
         card.className = 'gifts__card';
         cardsContainer.appendChild(card);
@@ -42,27 +46,22 @@ function createCards(data) {
         textCardContainer.className = 'gifts__card_text_container';
         card.appendChild(textCardContainer);
         const categoryCard = document.createElement('h4');
-       // console.log(categoryCard)
         categoryCard.className = 'gifts__card_text_container_category';
         textCardContainer.appendChild(categoryCard);
         categoryCard.textContent = item.category;
-        //console.log(categoryCard.textContent)
-        createColor(categoryCard)
-        createImage(categoryCard, imageContainer)
+        createColor(categoryCard);
+        createImage(categoryCard, imageContainer);
       
         const nameCard = document.createElement('h3');
         nameCard.className = 'gifts__card_text_container_name';
         nameCard.textContent = item.name;
         textCardContainer.appendChild(nameCard);  
 
-        
-       //console.log(item.category)
-
         // Modal
 
         const modal = document.createElement('div');
         modal.className = 'modal'
-        document.body.appendChild(modal)
+        document.body.appendChild(modal);
 
         const modalContent = document.createElement('div');
         modalContent.className = 'gifts__modal_wrapper';
@@ -84,8 +83,7 @@ function createCards(data) {
         modalCategory.className = 'gifts__modal_text_wrapper_content_head4';
         modalCategory.textContent = item.category;
         modalTextContent.appendChild(modalCategory);
-        //console.log(modalCategory.textContent)
-        createImage(modalCategory, modalImageContainer) 
+        createImageModal(modalCategory, modalImageContainer) 
         createColor(modalCategory)
 
         const modalName = document.createElement('h3');
@@ -107,10 +105,7 @@ function createCards(data) {
         modalSuperpowers.textContent = 'Adds superpowers to:';
         modalTableWrapper.appendChild(modalSuperpowers);
 
-        
-
         const superpowers = item.superpowers;
-        //console.log(superpowers)
 
         for (const key in superpowers) {
             if (superpowers.hasOwnProperty(key)) {
@@ -129,13 +124,10 @@ function createCards(data) {
                 modalSuperpowerValue.className = 'gifts__modal_text_wrapper_table_content_paragraph_par2';
                 modalSuperpowerValue.textContent = `${superpowers[key]}`;
                 superpowersElement.appendChild(modalSuperpowerValue);
-                
-                //console.log(superpowers[key])
 
                 const superpowersImage = document.createElement('div');
                 superpowersImage.className = 'gifts__modal_text_wrapper_table_content_paragraph_img';
                 superpowersElement.appendChild(superpowersImage)
-                //console.log(modalSuperpowerValue.textContent)
 
                 superpowersImage.style.backgroundImage = `url(images/gifts/${modalSuperpowerValue.textContent}.png)`;
    
@@ -147,32 +139,28 @@ function createCards(data) {
         closeModal.textContent = '🞩';
         modalContent.appendChild(closeModal);
 
-
         card.onclick = () => {
             modal.classList.add('modal__show')
-          //  modal.style.display = 'flex';
             scrollController.disablesScroll();
         };
 
-         closeModal.onclick = () => {
-            //modal.style.display = 'none';
+            closeModal.onclick = () => {
             modal.classList.remove('modal__show')
             scrollController.enabledScroll();
         };
 
         modal.addEventListener('click', (event) => {
-       if(event.target.classList.contains('modal')) {
-       // modal.style.display = 'none';
-         modal.classList.remove('modal__show')
-    };
+            if(event.target.classList.contains('modal')) {
+            modal.classList.remove('modal__show')
+        };
 
-    scrollController.enabledScroll();
-  
+        scrollController.enabledScroll();
+
         });
     };
-};
 
-createCards()
+    setBackgroundColor();
+};
 
 function createColor(categoryCard) {
     if (categoryCard.textContent === 'For Work') {
@@ -181,7 +169,7 @@ function createColor(categoryCard) {
         categoryCard.style.color = '#06A44F';
     } else {
         categoryCard.style.color = '#FF43F7';
-    }
+    };
 };
 
 function createImage(categoryCard, imageContainer) {
@@ -191,18 +179,61 @@ function createImage(categoryCard, imageContainer) {
         imageContainer.style.backgroundImage = `url(images/gifts/gift-for-health.png)`;
     } else {
         imageContainer.style.backgroundImage = `url(images/gifts/gift-for-harmony.png)`;
-    }
+    };
 };
 
-function createImage(modalCategory, modalImageContainer) {
+function createImageModal(modalCategory, modalImageContainer) {
      if (modalCategory.textContent === 'For Work') {
         modalImageContainer.style.backgroundImage = `url(images/gifts/gift-for-work.png)`; 
     } else if (modalCategory.textContent === 'For Health') {
         modalImageContainer.style.backgroundImage = `url(images/gifts/gift-for-health.png)`;
     } else {
         modalImageContainer.style.backgroundImage = `url(images/gifts/gift-for-harmony.png)`;
-    }
+    };
 };
 
-document.addEventListener('DOMContentLoaded', loadJSON);
+function createCardsForWork() {
+    const giftFilteredByWork = giftsList.filter((card) => card.category === 'For Work');
+    createCards(giftFilteredByWork);
+    forWork.style.backgroundColor = '#FFFFFF33';
+};
 
+function createCardsForHealth() {
+    const giftFilteredByHealth = giftsList.filter((card) => card.category === 'For Health');
+    createCards(giftFilteredByHealth);
+    forHealth.style.backgroundColor = '#FFFFFF33'
+};
+
+function createCardsForHarmony() {
+    const giftFilteredByHarmony = giftsList.filter((card) => card.category === 'For Harmony');
+    createCards(giftFilteredByHarmony);
+    forHarmony.style.backgroundColor = '#FFFFFF33';
+};
+
+function createAllCards() {
+    let j, temp;
+
+    for (let i = 0; i < giftsList.length; i++) {
+        j = Math.floor(Math.random() * (i + 1));
+	    temp = giftsList[j];
+	    giftsList[j] = giftsList[i];
+	    giftsList[i] = temp;
+    };
+    
+    createCards(giftsList);
+    allCards.style.backgroundColor = '#FFFFFF33';
+};
+
+allCards.addEventListener('click', createAllCards);
+forHealth.addEventListener('click', createCardsForHealth);
+forWork.addEventListener('click', createCardsForWork);
+forHarmony.addEventListener('click', createCardsForHarmony);
+
+function setBackgroundColor() {
+    allCards.style.backgroundColor = 'transparent'
+    forWork.style.backgroundColor = 'transparent'
+    forHealth.style.backgroundColor = 'transparent'
+    forHarmony.style.backgroundColor = 'transparent'
+};
+
+createAllCards();
